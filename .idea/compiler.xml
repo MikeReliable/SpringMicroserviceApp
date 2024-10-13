@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="grpcServer" />
+        <module name="kafkaProducer" />
+        <module name="clientSpringMicroserviceApp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="clientSpringMicroserviceApp" target="17" />
+      <module name="grpcServer" target="17" />
+      <module name="kafkaProducer" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clientSpringMicroserviceApp" options="-parameters" />
+      <module name="grpcServer" options="-parameters" />
+      <module name="kafkaProducer" options="-parameters" />
+    </option>
+  </component>
+</project>

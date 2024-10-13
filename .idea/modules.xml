@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clientSpringMicroserviceApp/clientSpringMicroserviceApp.iml" filepath="$PROJECT_DIR$/clientSpringMicroserviceApp/clientSpringMicroserviceApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/grpcServer/grpcServer.iml" filepath="$PROJECT_DIR$/grpcServer/grpcServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafkaProducer/kafkaProducer.iml" filepath="$PROJECT_DIR$/kafkaProducer/kafkaProducer.iml" />
+    </modules>
+  </component>
+</project>

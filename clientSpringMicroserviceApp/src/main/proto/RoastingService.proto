@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.mike;
+
+message RoastingRequest{
+
+  bool isRoast = 1;
+
+}
+
+message RoastingResponse {
+
+  string teamUUID = 1;
+  string country = 2;
+  string variety = 3;
+  int32 weightIncome = 4;
+  int32 weightOutcome = 5;
+
+}
+
+service RoastingService {
+  rpc roasting(RoastingRequest) returns (RoastingResponse);
+}
