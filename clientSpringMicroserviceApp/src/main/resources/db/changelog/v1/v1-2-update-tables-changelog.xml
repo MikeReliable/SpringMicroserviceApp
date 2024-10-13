@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="v1-2-1" author="Mike">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="coffee_roasting"/>
+        </preConditions>
+        <addForeignKeyConstraint baseColumnNames="variety"
+                                 baseTableName="coffee_roasting"
+                                 constraintName="variety"
+                                 referencedColumnNames="variety"
+                                 referencedTableName="coffee"/>
+    </changeSet>
+
+    <changeSet id="v1-2-2" author="Mike">
+        <preConditions onFail="MARK_RAN">
+            <tableExists tableName="coffee_roasting"/>
+        </preConditions>
+        <addForeignKeyConstraint baseColumnNames="roasting_id"
+                                 baseTableName="coffee_roasting"
+                                 constraintName="roasting_id"
+                                 referencedColumnNames="roasting_id"
+                                 referencedTableName="roasting"/>
+    </changeSet>
+</databaseChangeLog>

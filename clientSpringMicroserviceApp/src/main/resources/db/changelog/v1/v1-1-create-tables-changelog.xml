@@ -1,0 +1,78 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="v1-1-1" author="Mike">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="coffee"/>
+            </not>
+        </preConditions>
+        <createTable tableName="coffee">
+            <column name="variety" type="varchar(255)">
+                <constraints nullable="false"
+                             unique="true"
+                             primaryKey="true"/>
+            </column>
+            <column name="country" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="arabica" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="robusta" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="v1-1-2" author="Mike">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="roasting"/>
+            </not>
+        </preConditions>
+        <createTable tableName="roasting">
+            <column name="roasting_id" type="bigint" autoIncrement="true">
+                <constraints nullable="false"
+                             primaryKey="true"/>
+            </column>
+            <column name="teamuuid" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="country" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="variety" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight_income" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight_outcome" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="v1-1-3" author="Mike">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="coffee_roasting"/>
+            </not>
+        </preConditions>
+        <createTable tableName="coffee_roasting">
+            <column name="variety" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="roasting_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
