@@ -13,7 +13,7 @@ public class GrpcServerApplication {
     public static void main(String[] args) throws IOException, InterruptedException {
         SpringApplication.run(GrpcServerApplication.class, args);
 
-        Server server = ServerBuilder.forPort(8080)
+        Server server = ServerBuilder.forPort(9000)
                 .addService(new RoastingServiceImpl())
                 .build();
 
