@@ -8,3 +8,6 @@ spring:
     password: root
     url: jdbc:postgresql://localhost:5432/coffeeRoast
     driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/main-changelog.xml

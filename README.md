@@ -46,7 +46,7 @@ mvn spring-boot:run
 
 -> Applications run on ports:  
 kafkaProducer : port = 8080  
-kafkaProducer : port = 9000  
+grpcServer : port = 9000  
 clientSpringMicroserviceApp : port = 8000
 
 -> Swagger UI specification will be available at http://localhost:8000/swagger-ui/index.html
